@@ -1,4 +1,7 @@
 import { useState } from "react";
+
+import triangleIcon from "../../img/triangle.svg";
+
 import styles from "./accordion.module.css";
 
 function Accordion({ label, data, isOpen, handleToggle, handleVar }) {
@@ -17,6 +20,7 @@ function Accordion({ label, data, isOpen, handleToggle, handleVar }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.label} onClick={handleLabelClick}>
+        <img src={triangleIcon} className={isOpen ? styles.activeAcc : ""} />{" "}
         {label}
       </div>
       <div

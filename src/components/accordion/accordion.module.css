@@ -27,7 +27,9 @@
   transition: all 1s ease;
   overflow: hidden;
 }
-
+.activeAcc {
+  transform: rotate(90deg);
+}
 .variant {
   display: flex;
   flex-direction: column;
