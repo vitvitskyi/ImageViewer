@@ -1,0 +1,39 @@
+.wrapper {
+  width: 60%;
+}
+
+.img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.bigImg {
+  position: relative;
+}
+
+.hintText {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-bg);
+  padding: 3px 5px;
+}
+
+.thumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbImg {
+  width: 20%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.thumbImg:hover {
+  border-color: var(--color-variant-hover-border);
+  transition: all 0.3s ease;
+}
