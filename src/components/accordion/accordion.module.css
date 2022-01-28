@@ -13,9 +13,10 @@
 .variants {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   padding: 2px;
   opacity: 1;
-  height: 160px;
+  height: fit-content;
   transition: all 1s ease;
 }
 
@@ -33,6 +34,10 @@
   border: 3px solid transparent;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.variant img {
+  width: 100%;
 }
 
 .variant:hover,

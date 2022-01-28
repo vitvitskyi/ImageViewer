@@ -2,13 +2,15 @@ import { useState } from "react";
 import styles from "./accordion.module.css";
 
 function Accordion({ label, data, isOpen, handleToggle, handleVar }) {
-  const [active, setActive] = useState(data[0].name);
+  const [active, setActive] = useState("");
 
   const handleLabelClick = () => {
     handleToggle(label);
+    setActive("");
   };
 
   const handleVarClick = (name) => {
+    setActive(name);
     handleVar(name);
   };
 

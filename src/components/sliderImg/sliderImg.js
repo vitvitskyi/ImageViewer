@@ -13,11 +13,21 @@ function SliderImg({ variant }) {
 
   const handleDrag = (e) => {
     if (dragPos - e.clientX === 1) {
-      setPos(pos === 22 ? 0 : pos + 1);
-    } else if (dragPos - e.clientX === -1) {
       setPos(pos === 0 ? 22 : pos - 1);
+    } else if (dragPos - e.clientX === -1) {
+      setPos(pos === 22 ? 0 : pos + 1);
     } else {
       setDragPos(e.clientX);
+    }
+  };
+
+  const handleTouch = (e) => {
+    if (dragPos - e.touches[0].clientX === 1) {
+      setPos(pos === 0 ? 22 : pos - 1);
+    } else if (dragPos - e.touches[0].clientX === -1) {
+      setPos(pos === 22 ? 0 : pos + 1);
+    } else {
+      setDragPos(e.touches[0].clientX);
     }
   };
 
@@ -29,6 +39,7 @@ function SliderImg({ variant }) {
           src={data[variant][pos]}
           alt="img"
           onDrag={handleDrag}
+          onTouchMove={handleTouch}
           onClick={() => setIsOpen(true)}
         />
         <span className={styles.hintText}>
